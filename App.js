@@ -12,7 +12,7 @@ import LaunchDetailsScreen from "./src/Components/LaunchDetailsScreen";
 import { createStackNavigator } from "react-navigation";
 import SearchScreen from "./src/Components/SearchScreen";
 import SettingsScreen from "./src/Components/SettingsScreen";
-import LaunchesModel from "./src/Models/LaunchesModel";
+import ArtistsModel from "./src/Models/ArtistsModel";
 import SearchModel from "./src/Models/SearchModel";
 import LibrariesScreen from "./src/Components/LibrariesScreen/LibrariesScreen";
 
@@ -92,7 +92,7 @@ const Navigation = createBottomTabNavigator(
   }
 );
 
-const launches = new LaunchesModel();
+const artists = new ArtistsModel();
 const search = new SearchModel();
 
 export default class extends Component {
@@ -113,16 +113,13 @@ export default class extends Component {
       this.state.appState.match(/inactive|background/) &&
       nextAppState === "active"
     ) {
-      if (launches.numberOfLaunches > 0) {
-        launches.scheduleNotification(launches.launches[0]);
-      }
     }
     this.setState({ appState: nextAppState });
   };
 
   render() {
     return (
-      <Provider launches={launches} search={search}>
+      <Provider artists={artists} search={search}>
         <ThemeProvider theme={theme}>
           <>
             <StatusBar barStyle="light-content" />
@@ -134,6 +131,6 @@ export default class extends Component {
   }
 }
 
-// Access the launches data easily
-window.launches = launches;
+// Access the data easily
+window.artists = artists;
 window.search = search;

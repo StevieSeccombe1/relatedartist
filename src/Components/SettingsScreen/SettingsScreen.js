@@ -62,7 +62,7 @@ const touchableHitSlop = {
   bottom: hitSlopValue / 2
 };
 
-@inject("launches")
+@inject("artists")
 @observer
 class SettingsScreen extends Component {
   state = {
@@ -82,7 +82,7 @@ class SettingsScreen extends Component {
               <SectionTitle>Notify me</SectionTitle>
               <Switch
                 value={notifications.enabled}
-                onValueChange={() => this.props.launches.toggleNotifications()}
+                onValueChange={() => this.props.artists.toggleNotifications()}
               />
             </Section>
             <Section

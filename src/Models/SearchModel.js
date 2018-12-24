@@ -34,21 +34,6 @@ export default class SearchModel {
     });
   };
 
-  // @action
-  // searchLaunches = str => {
-  //     this.state = "loading";
-  //     fetch(`${API_URL}/${str}`)
-  //         .then(data => data.json())
-  //         .then(data => {
-  //             this.results = data.launches || [];
-  //             this.totalResults = data.total;
-  //             this.state = "success";
-  //         })
-  //         .catch(err => {
-  //             this.state = "error";
-  //         });
-  // };
-
   @action
   searchArtists = str => {
     this.state = "loading";

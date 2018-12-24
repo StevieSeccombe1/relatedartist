@@ -17,7 +17,7 @@ const Wrapper = styled(ScreenBackground)`
   flex: 1;
 `;
 
-@inject("launches")
+@inject("artists")
 @observer
 export default class extends Component {
   static navigationOptions = {
@@ -33,11 +33,11 @@ export default class extends Component {
 
   componentDidMount() {
     if (this.props.navigation.getParam("game")) {
-      this.props.launches.continueGame(this.props.navigation.getParam("game"));
+      this.props.artists.continueGame(this.props.navigation.getParam("game"));
     } else if (this.props.navigation.getParam("name") === "new") {
-      this.props.launches.startRandomNewGame();
+      this.props.artists.startRandomNewGame();
     } else {
-      this.props.launches.startNewGame();
+      this.props.artists.startNewGame();
     }
   }
 
@@ -47,7 +47,7 @@ export default class extends Component {
 
   getRelatedArtists(id) {
     this.increment();
-    this.props.launches.getCurrentArtist(id);
+    this.props.artists.getCurrentArtist(id);
   }
 
   goBack(id, start, end, current, related, links) {
@@ -64,19 +64,19 @@ export default class extends Component {
       related,
       links
     };
-    this.props.launches.storeGame(game);
+    this.props.artists.storeGame(game);
     this.props.navigation.navigate("dashboard");
   }
 
   render() {
-    const data = this.props.launches;
-    const currentArtist = this.props.launches.currentArtist;
-    const currentArtistImage = this.props.launches.currentArtistImage;
-    const endArtist = this.props.launches.endArtist;
-    const startArtist = this.props.launches.startArtist;
-    const relatedArtists = this.props.launches.relatedArtists;
-    const id = this.props.launches.id;
-    let links = this.props.launches.links;
+    const data = this.props.artists;
+    const currentArtist = this.props.artists.currentArtist;
+    const currentArtistImage = this.props.artists.currentArtistImage;
+    const endArtist = this.props.artists.endArtist;
+    const startArtist = this.props.artists.startArtist;
+    const relatedArtists = this.props.artists.relatedArtists;
+    const id = this.props.artists.id;
+    let links = this.props.artists.links;
     links = links + this.counter;
 
     if (data.state === "error") {

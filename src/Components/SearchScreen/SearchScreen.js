@@ -39,7 +39,7 @@ const ResultCount = styled.Text`
   padding-bottom: 10px;
 `;
 
-@inject("search", "launches")
+@inject("search", "artists")
 @observer
 export default class SearchScreen extends Component {
   static navigationOptions = {
@@ -61,13 +61,13 @@ export default class SearchScreen extends Component {
 
   setupGame(artist) {
     if (this.props.navigation.getParam("name") === "end") {
-      this.props.launches.endArtist = artist;
+      this.props.artists.endArtist = artist;
       this.props.navigation.navigate("currentGame");
     } else {
-      this.props.launches.startArtist = artist;
-      this.props.launches.currentArtist = artist;
+      this.props.artists.startArtist = artist;
+      this.props.artists.currentArtist = artist;
       if (artist.images.length !== 0) {
-        this.props.launches.currentArtistImage = artist.images[0].url;
+        this.props.artists.currentArtistImage = artist.images[0].url;
       }
       this.reset();
       this.props.navigation.navigate("searchScreen", { name: "end" });

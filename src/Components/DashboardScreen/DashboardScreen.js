@@ -20,7 +20,7 @@ const ContentWrapper = styled(SafeAreaView)`
   justify-content: center;
 `;
 
-@inject("launches")
+@inject("artists")
 @observer
 class DashboardScreen extends Component {
   startGame(custom) {
@@ -32,8 +32,8 @@ class DashboardScreen extends Component {
   }
 
   render() {
-    const { state } = this.props.launches;
-    const gameList = this.props.launches.games;
+    const { state } = this.props.artists;
+    const gameList = this.props.artists.games;
     let games = [];
     if (gameList.length > 0) {
       games = gameList.map(game => (
