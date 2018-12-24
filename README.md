@@ -1,16 +1,6 @@
 # [Spotilink](https://itunes.apple.com/us/app/spotilink-rocket-launches/id1439376174)
 
-[![iTunes App Store](https://img.shields.io/itunes/v/1439376174.svg?style=for-the-badge)](https://itunes.apple.com/us/app/spotilink-rocket-launches/id1439376174)
-
-A simple way to stay up to date with upcoming space launches, built with [React-Native](https://github.com/facebook/react-native), using the [Launch Library API](https://launchlibrary.net/).
-
-## Preview
-
-<div  style="text-align:center">
-<img  src="https://maximenory.com/public/mw1.png"  width="240" />
-<img  src="https://maximenory.com/public/mw2.png"  width="240" />
-<img  src="https://maximenory.com/public/mw3.png"  width="240" />
-</div>
+A related artists degrees of separation game, built with [React-Native](https://github.com/facebook/react-native), using the [Spotify Web-API](https://developer.spotify.com/documentation/web-api/reference).
 
 ## Installation
 
@@ -36,11 +26,9 @@ $ react-native run-ios
 
 [Styled-Components](https://www.styled-components.com/)
 
-## Contribute
+## Thanks
 
-If you find a bug, feel free to open an issue or submit a pull request.
-
-New ideas are always welcome, if you have an idea to modify or add a feature, let me know by opening an issue or messaging me on [Twitter](https://twitter.com/MaximeNory).
+This project has been adapted from [Moonwalk](https://github.com/Illu/moonwalk)
 
 ## Licence
 
