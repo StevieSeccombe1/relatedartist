@@ -1,4 +1,4 @@
-# [Spotilink](https://itunes.apple.com/us/app/spotilink-rocket-launches/id1439376174)
+# Spotilink
 
 A related artists degrees of separation game, built with [React-Native](https://github.com/facebook/react-native), using the [Spotify Web-API](https://developer.spotify.com/documentation/web-api/reference).
 
