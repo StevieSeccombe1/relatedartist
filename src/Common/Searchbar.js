@@ -19,17 +19,22 @@ class SearchBar extends Component {
     };
   }
 
+  search(searchStr) {
+    this.props.searchArtists(searchStr);
+    this.state.searchStr = null;
+  }
+
   render() {
     const { searchStr } = this.state;
     return (
       <Wrapper
         value={searchStr}
-        placeholder="Search launches..."
+        placeholder={`pick your ${this.props.name} artist...`}
         placeholderTextColor="#777"
         returnKeyType="search"
         clearButtonMode="always"
         onChangeText={searchStr => this.setState({ searchStr })}
-        onSubmitEditing={() => this.props.launchSearch(searchStr)}
+        onSubmitEditing={() => this.search(searchStr)}
       />
     );
   }

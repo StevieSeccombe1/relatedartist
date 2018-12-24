@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { SafeAreaView } from "react-navigation";
-import { ScrollView, RefreshControl } from "react-native";
-import { observer, inject } from "mobx-react";
+import { RefreshControl, ScrollView, View } from "react-native";
+import { inject, observer } from "mobx-react";
 import ScreenBackground from "../../Common/ScreenBackground";
 import ScreenTitle from "../../Common/ScreenTitle";
-import NextLaunchCard from "../NextLaunchCard";
 import ErrorCard from "../ErrorCard";
 import Loader from "../../Common/Loader";
-import CountdownCard from "../CountdownCard/CountdownCard";
+import NewGameCard from "../NewGameCard/NewGameCard";
+import GameCard from "../GameCard";
 
 const Wrapper = styled(ScreenBackground)`
   flex: 1;
@@ -23,55 +23,55 @@ const ContentWrapper = styled(SafeAreaView)`
 @inject("launches")
 @observer
 class DashboardScreen extends Component {
-  componentDidMount() {
-    this.loadUpcomingLaunch();
-    this.props.launches.initApp();
-  }
-
-  loadUpcomingLaunch() {
-    const { numberOfLaunches, loadNextLaunches } = this.props.launches;
-    loadNextLaunches(numberOfLaunches > 1 ? 5 : 1);
-  }
-
-  navigateToDetails() {
-    const data = this.props.launches.upcomingLaunch;
-    this.props.navigation.navigate("details", { data });
+  startGame(custom) {
+    if (custom) {
+      this.props.navigation.navigate("searchScreen", { name: "start" });
+    } else {
+      this.props.navigation.navigate("currentGame", { name: "new" });
+    }
   }
 
   render() {
     const { state } = this.props.launches;
-    const data = this.props.launches.upcomingLaunch;
+    const gameList = this.props.launches.games;
+    let games = [];
+    if (gameList.length > 0) {
+      games = gameList.map(game => (
+        <GameCard
+          key={game.id}
+          game={game}
+          navigateToGame={() =>
+            this.props.navigation.navigate("currentGame", { game })
+          }
+        />
+      ));
+    }
 
     return (
       <Wrapper>
-        <ScreenTitle title="Next launch" />
+        <ScreenTitle title="My Games" />
+        <NewGameCard
+          name="Custom"
+          navigateToGame={() => this.startGame(true)}
+        />
+        <NewGameCard name="Random" navigateToGame={() => this.startGame()} />
+
         <ContentWrapper>
-          {state === "loading" && this.props.launches.numberOfLaunches === 0 ? (
+          {state === "loading" ? (
             <Loader />
           ) : state === "error" ? (
-            <ErrorCard onPress={() => this.loadUpcomingLaunch()} />
+            <ErrorCard />
           ) : (
-            data && (
-              <ScrollView
-                contentContainerStyle={{ flex: 1 }}
-                refreshControl={
-                  <RefreshControl
-                    refreshing={data.state === "loading"}
-                    onRefresh={() => this.loadUpcomingLaunch()}
-                    tintColor="#fff"
-                  />
-                }
-              >
-                <NextLaunchCard
-                  data={data}
-                  navigateToDetails={() => this.navigateToDetails()}
-                  scheduleNotification={data =>
-                    this.props.launches.scheduleNotification(data)
-                  }
+            <ScrollView
+              refreshControl={
+                <RefreshControl
+                  refreshing={state === "loading"}
+                  tintColor="#fff"
                 />
-                <CountdownCard data={data} />
-              </ScrollView>
-            )
+              }
+            >
+              {games}
+            </ScrollView>
           )}
         </ContentWrapper>
       </Wrapper>

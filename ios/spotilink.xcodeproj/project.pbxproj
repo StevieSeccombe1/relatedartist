@@ -5,17 +5,14 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
-		00ABE33513EC45B3AC7DB5D3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0807305AB95741108778DAF0 /* SimpleLineIcons.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* moonwalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* moonwalkTests.m */; };
-		034E4F8E781749528F178253 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2952F978724FCEAF17396F /* libRNVectorIcons.a */; };
-		08F9069B9C87483AB271E613 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC900B8182654461B08D71B6 /* FontAwesome5_Regular.ttf */; };
+		00E356F31AD99517003FC87E /* spotilinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* spotilinkTests.m */; };
+		0D578192B45B4DA4BCC639F6 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 072C0779C7154825856FE8B5 /* Foundation.ttf */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -26,7 +23,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		29CD4D6781CA4F279E7CDFFA /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E25896CF00A477A93A5EEA8 /* EvilIcons.ttf */; };
+		1BD2AC5053174BE2BDA08C6D /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBFA0BD4F854EDDB995B940 /* Octicons.ttf */; };
+		21958571B8134805B4B1B677 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 571E1BBBF52F495FAF2DA1B1 /* FontAwesome5_Solid.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -38,24 +36,23 @@
 		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* moonwalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* moonwalkTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* spotilinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* spotilinkTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		37330EDBBF8A421882E613C5 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10C2F02D1CC2422091826176 /* MaterialIcons.ttf */; };
-		455E7DCF43C7438CB1EE188D /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A36379E87AAE440EADFD18A5 /* FontAwesome.ttf */; };
-		62A3EC1060104130AFB68204 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DD96D835BA743BEB2C3ED72 /* Ionicons.ttf */; };
-		738DC3E8B84A44E9A74DC05B /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63879123E634488592C640EE /* Octicons.ttf */; };
+		5666D654A163425CAACAEDB7 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BD4AA5DD0DD42CE9F1CE80F /* SimpleLineIcons.ttf */; };
+		5FF6C41012E345BAACBC5AFE /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B5F8E3C93A742E5968F007B /* MaterialCommunityIcons.ttf */; };
+		6AB44B8786AF412B953F6D01 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C5E1C883BC46959490E776 /* FontAwesome5_Brands.ttf */; };
+		6E645CC9E23246028C29A1D4 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07DAE97A89B9407CB11089DE /* Feather.ttf */; };
+		7670B6056F404EFD88E95D42 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81588F203F1342E6B5BE68AA /* FontAwesome.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8F21C9760E8244539685FA73 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1D2B9DF9E8E4DA79AB8DC24 /* MaterialCommunityIcons.ttf */; };
-		9CC760102177C87B006CE607 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC75FF32177C875006CE607 /* libRCTPushNotification.a */; };
-		9CD05530217512B700CB1BF1 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0552F217512B700CB1BF1 /* main.jsbundle */; };
-		A317E77F81C740C485501A7F /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91493EBC74894D3CB6C39AC2 /* Entypo.ttf */; };
-		ABEA4AD7BC58492381D2263A /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D024A677F2624A1A82E8B54A /* Foundation.ttf */; };
+		96AF47C5AE804C90908FBC93 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 911835CC560448A29F2F2904 /* Entypo.ttf */; };
+		9C6F7D2B88914D839B4C92D7 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE617F7809B44B9795D518D4 /* libRNVectorIcons.a */; };
+		A27F64AC3D2946DD817C5193 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D45F61ECF9A4B7283116D22 /* MaterialIcons.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		B83EB11C896843F0A26D4363 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 224628899C88408BAB260051 /* FontAwesome5_Brands.ttf */; };
-		D772C156B5F345D89D1393B0 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 654FE10C5FAD4F8996E0F14F /* libBVLinearGradient.a */; };
-		E3C7BB37AC2D41309FDA649D /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E37135E380634676804E5334 /* FontAwesome5_Solid.ttf */; };
-		ECA4BA41CC1F46C18786700E /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 140761E85BB14142B84140C3 /* Feather.ttf */; };
-		EE656E6B543D4413AE1F024D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F39607157EFB4ED59F582D38 /* Zocial.ttf */; };
+		BDB97088C3CB4167AE755096 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B04C7B15652646738B5CEC5E /* Ionicons.ttf */; };
+		CDDFC5F53919413A9AC64A22 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 531ED524F4EF4148B2D13B0A /* FontAwesome5_Regular.ttf */; };
+		CEB2BA9FC414477989D09DBE /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A87B5D89B5D433BA0545B4D /* EvilIcons.ttf */; };
+		D7CDC1E196314723885291BF /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42A3E43A6EEE4396B7487969 /* Zocial.ttf */; };
+		F7FECF2347D4445A89C8EF7E /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E85736BC52E40368D45FBF3 /* libBVLinearGradient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +96,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = moonwalk;
+			remoteInfo = spotilink;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -127,7 +124,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "moonwalk-tvOS";
+			remoteInfo = "spotilink-tvOS";
 		};
 		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -311,6 +308,27 @@
 			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
 			remoteInfo = "RCTAnimation-tvOS";
 		};
+		76AB63F721C584E400E3B92B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1A9664BBDDD4380B73C4464 /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
+		};
+		76AB63FE21C5881C00E3B92B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76AB63F921C5881C00E3B92B /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = BVLinearGradient;
+		};
+		76AB640021C5881C00E3B92B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76AB63F921C5881C00E3B92B /* BVLinearGradient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 64AA15081EF7F30100718508;
+			remoteInfo = "BVLinearGradient-tvOS";
+		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -325,41 +343,6 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
-		9C107E47215EBD6500193625 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8628F2ABFA454D6FB010D275 /* BVLinearGradient.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = BVLinearGradient;
-		};
-		9C107E49215EBD6500193625 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8628F2ABFA454D6FB010D275 /* BVLinearGradient.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 64AA15081EF7F30100718508;
-			remoteInfo = "BVLinearGradient-tvOS";
-		};
-		9C107E4C215EBD6500193625 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9450F87472C40C58DF1BEC4 /* RNVectorIcons.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
-			remoteInfo = RNVectorIcons;
-		};
-		9CC75FF22177C875006CE607 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC75FDF2177C874006CE607 /* RCTPushNotification.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RCTPushNotification;
-		};
-		9CC75FF42177C875006CE607 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CC75FDF2177C874006CE607 /* RCTPushNotification.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
-			remoteInfo = "RCTPushNotification-tvOS";
-		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -370,52 +353,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
 		00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTGeolocation.xcodeproj; path = "../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* moonwalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moonwalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* spotilinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spotilinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* moonwalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moonwalkTests.m; sourceTree = "<group>"; };
-		0807305AB95741108778DAF0 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		10C2F02D1CC2422091826176 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* spotilinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spotilinkTests.m; sourceTree = "<group>"; };
+		072C0779C7154825856FE8B5 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		07DAE97A89B9407CB11089DE /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		0A87B5D89B5D433BA0545B4D /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		0E85736BC52E40368D45FBF3 /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* moonwalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moonwalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = moonwalk/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = moonwalk/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* spotilink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotilink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = spotilink/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = spotilink/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = moonwalk/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = moonwalk/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = moonwalk/main.m; sourceTree = "<group>"; };
-		140761E85BB14142B84140C3 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = spotilink/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = spotilink/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = spotilink/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		224628899C88408BAB260051 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* moonwalk-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "moonwalk-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* moonwalk-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "moonwalk-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5F8E3C93A742E5968F007B /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* spotilink-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spotilink-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* spotilink-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spotilink-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A3E43A6EEE4396B7487969 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		531ED524F4EF4148B2D13B0A /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		571E1BBBF52F495FAF2DA1B1 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		63879123E634488592C640EE /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		654FE10C5FAD4F8996E0F14F /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
+		6BD4AA5DD0DD42CE9F1CE80F /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		76AB63F921C5881C00E3B92B /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		81588F203F1342E6B5BE68AA /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		8628F2ABFA454D6FB010D275 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
-		8DD96D835BA743BEB2C3ED72 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		8E25896CF00A477A93A5EEA8 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		91493EBC74894D3CB6C39AC2 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
-		9CC75FAF2177C3AA006CE607 /* moonwalk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = moonwalk.entitlements; path = moonwalk/moonwalk.entitlements; sourceTree = "<group>"; };
-		9CC75FDF2177C874006CE607 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
-		9CD0552F217512B700CB1BF1 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = moonwalk/main.jsbundle; sourceTree = "<group>"; };
-		A36379E87AAE440EADFD18A5 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		911835CC560448A29F2F2904 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		9CBFA0BD4F854EDDB995B940 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		9D45F61ECF9A4B7283116D22 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		D024A677F2624A1A82E8B54A /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		D1D2B9DF9E8E4DA79AB8DC24 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		E37135E380634676804E5334 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		EB2952F978724FCEAF17396F /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
-		F39607157EFB4ED59F582D38 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		F9450F87472C40C58DF1BEC4 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
-		FC900B8182654461B08D71B6 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		AE617F7809B44B9795D518D4 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		B04C7B15652646738B5CEC5E /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		D0C5E1C883BC46959490E776 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		E1A9664BBDDD4380B73C4464 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,7 +412,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC760102177C87B006CE607 /* libRCTPushNotification.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -444,8 +424,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				D772C156B5F345D89D1393B0 /* libBVLinearGradient.a in Frameworks */,
-				034E4F8E781749528F178253 /* libRNVectorIcons.a in Frameworks */,
+				9C6F7D2B88914D839B4C92D7 /* libRNVectorIcons.a in Frameworks */,
+				F7FECF2347D4445A89C8EF7E /* libBVLinearGradient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,13 +497,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* moonwalkTests */ = {
+		00E356EF1AD99517003FC87E /* spotilinkTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* moonwalkTests.m */,
+				00E356F21AD99517003FC87E /* spotilinkTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = moonwalkTests;
+			path = spotilinkTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -554,11 +534,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* moonwalk */ = {
+		13B07FAE1A68108700A75B9A /* spotilink */ = {
 			isa = PBXGroup;
 			children = (
-				9CC75FAF2177C3AA006CE607 /* moonwalk.entitlements */,
-				9CD0552F217512B700CB1BF1 /* main.jsbundle */,
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -566,7 +545,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = moonwalk;
+			name = spotilink;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -609,6 +588,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		76AB63CE21C584E300E3B92B /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AE617F7809B44B9795D518D4 /* libRNVectorIcons.a */,
+				0E85736BC52E40368D45FBF3 /* libBVLinearGradient.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		76AB63F421C584E400E3B92B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76AB63F821C584E400E3B92B /* libRNVectorIcons.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76AB63FA21C5881C00E3B92B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76AB63FF21C5881C00E3B92B /* libBVLinearGradient.a */,
+				76AB640121C5881C00E3B92B /* libBVLinearGradient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,7 +626,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				9CC75FDF2177C874006CE607 /* RCTPushNotification.xcodeproj */,
+				76AB63F921C5881C00E3B92B /* BVLinearGradient.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -634,8 +639,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				8628F2ABFA454D6FB010D275 /* BVLinearGradient.xcodeproj */,
-				F9450F87472C40C58DF1BEC4 /* RNVectorIcons.xcodeproj */,
+				E1A9664BBDDD4380B73C4464 /* RNVectorIcons.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -652,13 +656,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* moonwalk */,
+				13B07FAE1A68108700A75B9A /* spotilink */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* moonwalkTests */,
+				00E356EF1AD99517003FC87E /* spotilinkTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				CA5CF726503C44A38FAE27EE /* Resources */,
-				9C107E1B215EBD6200193625 /* Recovered References */,
+				A1C4B2A9FB9D43DC8B73118E /* Resources */,
+				76AB63CE21C584E300E3B92B /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -668,47 +672,33 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* moonwalk.app */,
-				00E356EE1AD99517003FC87E /* moonwalkTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* moonwalk-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* moonwalk-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* spotilink.app */,
+				00E356EE1AD99517003FC87E /* spotilinkTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* spotilink-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* spotilink-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C107E1B215EBD6200193625 /* Recovered References */ = {
+		A1C4B2A9FB9D43DC8B73118E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				654FE10C5FAD4F8996E0F14F /* libBVLinearGradient.a */,
-				EB2952F978724FCEAF17396F /* libRNVectorIcons.a */,
+				911835CC560448A29F2F2904 /* Entypo.ttf */,
+				0A87B5D89B5D433BA0545B4D /* EvilIcons.ttf */,
+				07DAE97A89B9407CB11089DE /* Feather.ttf */,
+				81588F203F1342E6B5BE68AA /* FontAwesome.ttf */,
+				D0C5E1C883BC46959490E776 /* FontAwesome5_Brands.ttf */,
+				531ED524F4EF4148B2D13B0A /* FontAwesome5_Regular.ttf */,
+				571E1BBBF52F495FAF2DA1B1 /* FontAwesome5_Solid.ttf */,
+				072C0779C7154825856FE8B5 /* Foundation.ttf */,
+				B04C7B15652646738B5CEC5E /* Ionicons.ttf */,
+				1B5F8E3C93A742E5968F007B /* MaterialCommunityIcons.ttf */,
+				9D45F61ECF9A4B7283116D22 /* MaterialIcons.ttf */,
+				9CBFA0BD4F854EDDB995B940 /* Octicons.ttf */,
+				6BD4AA5DD0DD42CE9F1CE80F /* SimpleLineIcons.ttf */,
+				42A3E43A6EEE4396B7487969 /* Zocial.ttf */,
 			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		9C107E41215EBD6300193625 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9C107E4D215EBD6500193625 /* libRNVectorIcons.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9C107E43215EBD6300193625 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9C107E48215EBD6500193625 /* libBVLinearGradient.a */,
-				9C107E4A215EBD6500193625 /* libBVLinearGradient.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9CC75FE02177C874006CE607 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9CC75FF32177C875006CE607 /* libRCTPushNotification.a */,
-				9CC75FF52177C875006CE607 /* libRCTPushNotification-tvOS.a */,
-			);
-			name = Products;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		ADBDB9201DFEBF0600ED6528 /* Products */ = {
@@ -720,33 +710,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CA5CF726503C44A38FAE27EE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				91493EBC74894D3CB6C39AC2 /* Entypo.ttf */,
-				8E25896CF00A477A93A5EEA8 /* EvilIcons.ttf */,
-				140761E85BB14142B84140C3 /* Feather.ttf */,
-				A36379E87AAE440EADFD18A5 /* FontAwesome.ttf */,
-				224628899C88408BAB260051 /* FontAwesome5_Brands.ttf */,
-				FC900B8182654461B08D71B6 /* FontAwesome5_Regular.ttf */,
-				E37135E380634676804E5334 /* FontAwesome5_Solid.ttf */,
-				D024A677F2624A1A82E8B54A /* Foundation.ttf */,
-				8DD96D835BA743BEB2C3ED72 /* Ionicons.ttf */,
-				D1D2B9DF9E8E4DA79AB8DC24 /* MaterialCommunityIcons.ttf */,
-				10C2F02D1CC2422091826176 /* MaterialIcons.ttf */,
-				63879123E634488592C640EE /* Octicons.ttf */,
-				0807305AB95741108778DAF0 /* SimpleLineIcons.ttf */,
-				F39607157EFB4ED59F582D38 /* Zocial.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* moonwalkTests */ = {
+		00E356ED1AD99517003FC87E /* spotilinkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "moonwalkTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "spotilinkTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -757,14 +726,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = moonwalkTests;
-			productName = moonwalkTests;
-			productReference = 00E356EE1AD99517003FC87E /* moonwalkTests.xctest */;
+			name = spotilinkTests;
+			productName = spotilinkTests;
+			productReference = 00E356EE1AD99517003FC87E /* spotilinkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* moonwalk */ = {
+		13B07F861A680F5B00A75B9A /* spotilink */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "moonwalk" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "spotilink" */;
 			buildPhases = (
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -775,14 +744,14 @@
 			);
 			dependencies = (
 			);
-			name = moonwalk;
+			name = spotilink;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* moonwalk.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* spotilink.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* moonwalk-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* spotilink-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "moonwalk-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "spotilink-tvOS" */;
 			buildPhases = (
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -793,14 +762,14 @@
 			);
 			dependencies = (
 			);
-			name = "moonwalk-tvOS";
-			productName = "moonwalk-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* moonwalk-tvOS.app */;
+			name = "spotilink-tvOS";
+			productName = "spotilink-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* spotilink-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* moonwalk-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* spotilink-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "moonwalk-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "spotilink-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -811,9 +780,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "moonwalk-tvOSTests";
-			productName = "moonwalk-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* moonwalk-tvOSTests.xctest */;
+			name = "spotilink-tvOSTests";
+			productName = "spotilink-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* spotilink-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -827,16 +796,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6WD2C784QG;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
-					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 6WD2C784QG;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -849,7 +809,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "moonwalk" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "spotilink" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -862,8 +822,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9C107E43215EBD6300193625 /* Products */;
-					ProjectRef = 8628F2ABFA454D6FB010D275 /* BVLinearGradient.xcodeproj */;
+					ProductGroup = 76AB63FA21C5881C00E3B92B /* Products */;
+					ProjectRef = 76AB63F921C5881C00E3B92B /* BVLinearGradient.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -894,10 +854,6 @@
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
 				},
 				{
-					ProductGroup = 9CC75FE02177C874006CE607 /* Products */;
-					ProjectRef = 9CC75FDF2177C874006CE607 /* RCTPushNotification.xcodeproj */;
-				},
-				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
 					ProjectRef = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
 				},
@@ -918,16 +874,16 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 9C107E41215EBD6300193625 /* Products */;
-					ProjectRef = F9450F87472C40C58DF1BEC4 /* RNVectorIcons.xcodeproj */;
+					ProductGroup = 76AB63F421C584E400E3B92B /* Products */;
+					ProjectRef = E1A9664BBDDD4380B73C4464 /* RNVectorIcons.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* moonwalk */,
-				00E356ED1AD99517003FC87E /* moonwalkTests */,
-				2D02E47A1E0B4A5D006451C7 /* moonwalk-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* moonwalk-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* spotilink */,
+				00E356ED1AD99517003FC87E /* spotilinkTests */,
+				2D02E47A1E0B4A5D006451C7 /* spotilink-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* spotilink-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1171,6 +1127,27 @@
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		76AB63F821C584E400E3B92B /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = 76AB63F721C584E400E3B92B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76AB63FF21C5881C00E3B92B /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 76AB63FE21C5881C00E3B92B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76AB640121C5881C00E3B92B /* libBVLinearGradient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBVLinearGradient.a;
+			remoteRef = 76AB640021C5881C00E3B92B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1183,41 +1160,6 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9C107E48215EBD6500193625 /* libBVLinearGradient.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libBVLinearGradient.a;
-			remoteRef = 9C107E47215EBD6500193625 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9C107E4A215EBD6500193625 /* libBVLinearGradient.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libBVLinearGradient.a;
-			remoteRef = 9C107E49215EBD6500193625 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9C107E4D215EBD6500193625 /* libRNVectorIcons.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNVectorIcons.a;
-			remoteRef = 9C107E4C215EBD6500193625 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC75FF32177C875006CE607 /* libRCTPushNotification.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRCTPushNotification.a;
-			remoteRef = 9CC75FF22177C875006CE607 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9CC75FF52177C875006CE607 /* libRCTPushNotification-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libRCTPushNotification-tvOS.a";
-			remoteRef = 9CC75FF42177C875006CE607 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {
@@ -1243,21 +1185,20 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				A317E77F81C740C485501A7F /* Entypo.ttf in Resources */,
-				29CD4D6781CA4F279E7CDFFA /* EvilIcons.ttf in Resources */,
-				ECA4BA41CC1F46C18786700E /* Feather.ttf in Resources */,
-				455E7DCF43C7438CB1EE188D /* FontAwesome.ttf in Resources */,
-				B83EB11C896843F0A26D4363 /* FontAwesome5_Brands.ttf in Resources */,
-				08F9069B9C87483AB271E613 /* FontAwesome5_Regular.ttf in Resources */,
-				E3C7BB37AC2D41309FDA649D /* FontAwesome5_Solid.ttf in Resources */,
-				ABEA4AD7BC58492381D2263A /* Foundation.ttf in Resources */,
-				9CD05530217512B700CB1BF1 /* main.jsbundle in Resources */,
-				62A3EC1060104130AFB68204 /* Ionicons.ttf in Resources */,
-				8F21C9760E8244539685FA73 /* MaterialCommunityIcons.ttf in Resources */,
-				37330EDBBF8A421882E613C5 /* MaterialIcons.ttf in Resources */,
-				738DC3E8B84A44E9A74DC05B /* Octicons.ttf in Resources */,
-				00ABE33513EC45B3AC7DB5D3 /* SimpleLineIcons.ttf in Resources */,
-				EE656E6B543D4413AE1F024D /* Zocial.ttf in Resources */,
+				96AF47C5AE804C90908FBC93 /* Entypo.ttf in Resources */,
+				CEB2BA9FC414477989D09DBE /* EvilIcons.ttf in Resources */,
+				6E645CC9E23246028C29A1D4 /* Feather.ttf in Resources */,
+				7670B6056F404EFD88E95D42 /* FontAwesome.ttf in Resources */,
+				6AB44B8786AF412B953F6D01 /* FontAwesome5_Brands.ttf in Resources */,
+				CDDFC5F53919413A9AC64A22 /* FontAwesome5_Regular.ttf in Resources */,
+				21958571B8134805B4B1B677 /* FontAwesome5_Solid.ttf in Resources */,
+				0D578192B45B4DA4BCC639F6 /* Foundation.ttf in Resources */,
+				BDB97088C3CB4167AE755096 /* Ionicons.ttf in Resources */,
+				5FF6C41012E345BAACBC5AFE /* MaterialCommunityIcons.ttf in Resources */,
+				A27F64AC3D2946DD817C5193 /* MaterialIcons.ttf in Resources */,
+				1BD2AC5053174BE2BDA08C6D /* Octicons.ttf in Resources */,
+				5666D654A163425CAACAEDB7 /* SimpleLineIcons.ttf in Resources */,
+				D7CDC1E196314723885291BF /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,7 +1255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* moonwalkTests.m in Sources */,
+				00E356F31AD99517003FC87E /* spotilinkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1340,7 +1281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* moonwalkTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* spotilinkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1349,12 +1290,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* moonwalk */;
+			target = 13B07F861A680F5B00A75B9A /* spotilink */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* moonwalk-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* spotilink-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1366,7 +1307,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = moonwalk;
+			path = spotilink;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1376,17 +1317,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 6WD2C784QG;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 				);
-				INFOPLIST_FILE = moonwalkTests/Info.plist;
+				INFOPLIST_FILE = spotilinkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1400,7 +1340,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moonwalk.app/moonwalk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spotilink.app/spotilink";
 			};
 			name = Debug;
 		};
@@ -1409,13 +1349,12 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 6WD2C784QG;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 				);
-				INFOPLIST_FILE = moonwalkTests/Info.plist;
+				INFOPLIST_FILE = spotilinkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1429,7 +1368,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moonwalk.app/moonwalk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spotilink.app/spotilink";
 			};
 			name = Release;
 		};
@@ -1437,24 +1376,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = moonwalk/moonwalk.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 6WD2C784QG;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../react-native/React",
 				);
-				INFOPLIST_FILE = moonwalk/Info.plist;
+				INFOPLIST_FILE = spotilink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maximenory.moonwalk;
-				PRODUCT_NAME = moonwalk;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = spotilink;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1463,23 +1401,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = moonwalk/moonwalk.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6WD2C784QG;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
+					"$(SRCROOT)/../react-native/React",
 				);
-				INFOPLIST_FILE = moonwalk/Info.plist;
+				INFOPLIST_FILE = spotilink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.maximenory.moonwalk;
-				PRODUCT_NAME = moonwalk;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = spotilink;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1498,10 +1435,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 				);
-				INFOPLIST_FILE = "moonwalk-tvOS/Info.plist";
+				INFOPLIST_FILE = "spotilink-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1512,7 +1449,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.moonwalk-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.spotilink-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1534,10 +1471,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 				);
-				INFOPLIST_FILE = "moonwalk-tvOS/Info.plist";
+				INFOPLIST_FILE = "spotilink-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1548,7 +1485,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.moonwalk-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.spotilink-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1569,10 +1506,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 				);
-				INFOPLIST_FILE = "moonwalk-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "spotilink-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1583,10 +1520,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.moonwalk-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.spotilink-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moonwalk-tvOS.app/moonwalk-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spotilink-tvOS.app/spotilink-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -1604,10 +1541,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
 				);
-				INFOPLIST_FILE = "moonwalk-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "spotilink-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1618,10 +1555,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.moonwalk-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.spotilink-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moonwalk-tvOS.app/moonwalk-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spotilink-tvOS.app/spotilink-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1728,7 +1665,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "moonwalkTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "spotilinkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1737,7 +1674,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "moonwalk" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "spotilink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1746,7 +1683,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "moonwalk-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "spotilink-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1755,7 +1692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "moonwalk-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "spotilink-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1764,7 +1701,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "moonwalk" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "spotilink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

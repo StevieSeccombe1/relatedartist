@@ -4,7 +4,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-decorators",
       "licenseUrl": "https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-decorators/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -12,7 +12,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/mobxjs/mobx-react",
       "licenseUrl": "https://github.com/mobxjs/mobx-react/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -20,7 +20,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/mobxjs/mobx",
       "licenseUrl": "https://github.com/mobxjs/mobx/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -28,7 +28,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/prettier/prettier",
       "licenseUrl": "https://github.com/prettier/prettier/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -36,7 +36,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/brentvatne/react-native-linear-gradient",
       "licenseUrl": "https://github.com/brentvatne/react-native-linear-gradient/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -44,7 +44,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/brh55/react-native-open-maps",
       "licenseUrl": "https://github.com/brh55/react-native-open-maps/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -52,7 +52,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/oblador/react-native-vector-icons",
       "licenseUrl": "https://github.com/oblador/react-native-vector-icons/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -60,7 +60,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/facebook/react-native",
       "licenseUrl": "https://github.com/facebook/react-native/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -68,7 +68,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/fram-x/FluidTransitions",
       "licenseUrl": "https://github.com/fram-x/FluidTransitions",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -76,7 +76,7 @@
       "licenses": "BSD-2-Clause",
       "repository": "https://github.com/react-navigation/react-navigation",
       "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -84,7 +84,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/facebook/react",
       "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   },
   {
@@ -92,7 +92,7 @@
       "licenses": "MIT",
       "repository": "https://github.com/styled-components/styled-components",
       "licenseUrl": "https://github.com/styled-components/styled-components/raw/master/LICENSE",
-      "parents": "moonwalk"
+      "parents": "spotilink"
     }
   }
 ]

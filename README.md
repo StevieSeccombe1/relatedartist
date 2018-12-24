@@ -1,6 +1,6 @@
-# [Moonwalk](https://itunes.apple.com/us/app/moonwalk-rocket-launches/id1439376174)
+# [Spotilink](https://itunes.apple.com/us/app/spotilink-rocket-launches/id1439376174)
 
-[![iTunes App Store](https://img.shields.io/itunes/v/1439376174.svg?style=for-the-badge)](https://itunes.apple.com/us/app/moonwalk-rocket-launches/id1439376174)
+[![iTunes App Store](https://img.shields.io/itunes/v/1439376174.svg?style=for-the-badge)](https://itunes.apple.com/us/app/spotilink-rocket-launches/id1439376174)
 
 A simple way to stay up to date with upcoming space launches, built with [React-Native](https://github.com/facebook/react-native), using the [Launch Library API](https://launchlibrary.net/).
 
@@ -17,7 +17,7 @@ A simple way to stay up to date with upcoming space launches, built with [React-
 If you want to test the app on a simulator running locally, there's nothing more simple:
 
 ```bash
-$ cd moonwalk
+$ cd spotilink
 
 $ yarn
 

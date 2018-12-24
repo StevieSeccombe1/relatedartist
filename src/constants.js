@@ -1,12 +1,12 @@
 export const TABS = {
-  Home: "Home",
-  Calendar: "Calendar",
+  Home: "My Games",
+  Calendar: "Current Game",
   Search: "Search",
   Settings: "Settings"
 };
 
 export const TABBAR_ICONS = {
-  [TABS.Home]: "rocket",
+  [TABS.Home]: "spotify",
   [TABS.Calendar]: "calendar",
   [TABS.Search]: "search",
   [TABS.Settings]: "cog"

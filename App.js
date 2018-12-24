@@ -25,7 +25,9 @@ const Dashboard = createStackNavigator({
       headerBackTitle: null
     }
   },
-  details: { screen: LaunchDetailsScreen }
+  details: { screen: LaunchDetailsScreen },
+  currentGame: { screen: LaunchCalendarScreen },
+  searchScreen: { screen: SearchScreen }
 });
 
 const LaunchCalendar = createStackNavigator({
@@ -37,7 +39,7 @@ const LaunchCalendar = createStackNavigator({
       headerBackTitle: null
     }
   },
-  details: { screen: LaunchDetailsScreen }
+  dashboard: { screen: DashboardScreen }
 });
 
 const Search = createStackNavigator({
@@ -66,10 +68,10 @@ const Settings = createStackNavigator({
 
 const Navigation = createBottomTabNavigator(
   {
-    [TABS.Home]: Dashboard,
-    [TABS.Calendar]: LaunchCalendar,
-    [TABS.Search]: Search,
-    [TABS.Settings]: Settings
+    [TABS.Home]: Dashboard
+    // [TABS.Calendar]: LaunchCalendar,
+    // [TABS.Search]: Search,
+    // [TABS.Settings]: Settings
   },
   {
     navigationOptions: ({ navigation }) => ({

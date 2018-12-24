@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import LinearGradient from "react-native-linear-gradient";
-import Label from "../../Common/Label";
+import spotifyIcon from "../../Assets/spotify.png";
 
 const Wrapper = styled.View`
-    background: ${({ theme }) => theme.cardBackground};
-    margin: 20px;
+    margin: 10px;
     border-radius: 15px
-    padding: 20px;
-    padding-right: 15px;
+    padding: 10px;
+    width: 150px;
+    justify-content: center;
+  align-items: center;
 `;
 
-const DateWrapper = styled(LinearGradient)`
+const ImageWrapper = styled.View`
   border-radius: 6px;
   width: 50px;
   align-items: center;
@@ -19,20 +19,12 @@ const DateWrapper = styled(LinearGradient)`
   height: 50px;
 `;
 
-const Day = styled.Text`
-  color: white;
-  font-weight: bold;
-  font-size: ${({ large }) => (large ? 20 : 13)}px;
-`;
-
-const LabelWrapper = styled.View``;
-
 const Row = styled.View`
   flex-direction: row;
   flex: 1;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  flexwrap: wrap;
 `;
 
 const Desc = styled.Text`
@@ -41,46 +33,29 @@ const Desc = styled.Text`
   ${({ bold }) => bold && "font-weight: bold;"} margin-top: 5px;
 `;
 
-const MONTHS = [
-  "JAN",
-  "FEB",
-  "MAR",
-  "APR",
-  "MAY",
-  "JUN",
-  "JUL",
-  "AUG",
-  "SEP",
-  "OCT",
-  "NOV",
-  "DEC"
-];
+const BackgroundImage = styled.Image`
+  border-radius: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+`;
 
 export default ({ data }) => {
-  const launchTime = new Date(data.netstamp * 1000);
+  let image = require("../../Assets/spotify.png");
+  if (data.images.length !== 0) {
+    image = {
+      uri: data.images[data.images.length - 1].url
+    };
+  }
+
   return (
     <Wrapper>
-      <Row>
-        <DateWrapper
-          colors={["#ffb39d", "#ff43bb"]}
-          start={{ x: 0.0, y: 0.25 }}
-          end={{ x: 0.5, y: 1.0 }}
-        >
-          {data.netstamp === 0 ? (
-            <Day large>?</Day>
-          ) : (
-            <>
-              <Day>{launchTime.getDate()}</Day>
-              <Day>{MONTHS[launchTime.getMonth()]}</Day>
-            </>
-          )}
-        </DateWrapper>
-        <LabelWrapper>
-          <Label numberOfLines={2} text={data.lsp.abbrev} />
-        </LabelWrapper>
-      </Row>
+      <ImageWrapper>
+        <BackgroundImage source={image} />
+      </ImageWrapper>
       <Desc bold>{data.name}</Desc>
-      <Desc numberOfLines={1}>{data.location.name}</Desc>
     </Wrapper>
   );
 };
