@@ -6,7 +6,7 @@ import ScreenBackground from "../../Common/ScreenBackground";
 import Searchbar from "../../Common/Searchbar";
 import Loader from "../../Common/Loader";
 import { inject, observer } from "mobx-react";
-import CalendarCard from "../CalendarCard/CalendarCard";
+import RelatedArtistsCard from "../RelatedArtistsCard/RelatedArtistsCard";
 import PushableWrapper from "../../Common/PushableWrapper";
 import HeaderBack from "../../Common/HeaderBack";
 
@@ -109,17 +109,12 @@ export default class SearchScreen extends Component {
                       key={artist.id}
                       onPress={() => this.setupGame(artist)}
                     >
-                      <CalendarCard data={artist} />
+                      <RelatedArtistsCard data={artist} />
                     </PushableWrapper>
                   ))}
                 </View>
               </>
             )}
-            {/*<TouchableOpacity*/}
-            {/*onPress={() => Linking.openURL("https://launchlibrary.net/")}*/}
-            {/*>*/}
-            {/*<Footer>Data provided by the Launch Library</Footer>*/}
-            {/*</TouchableOpacity>*/}
           </ScrollWrapper>
         </ContentWrapper>
       </Wrapper>

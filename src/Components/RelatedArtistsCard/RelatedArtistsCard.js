@@ -1,36 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import spotifyIcon from "../../Assets/spotify.png";
 
 const Wrapper = styled.View`
-    margin: 10px;
     border-radius: 15px
     padding: 10px;
-    width: 150px;
-    justify-content: center;
-  align-items: center;
+    width: 125px;
+    height: 125px;
+    align-items: center;
 `;
 
 const ImageWrapper = styled.View`
   border-radius: 6px;
   width: 50px;
   align-items: center;
-  justify-content: center;
   height: 50px;
-`;
-
-const Row = styled.View`
-  flex-direction: row;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  flexwrap: wrap;
 `;
 
 const Desc = styled.Text`
   color: white;
   font-size: 15px;
   ${({ bold }) => bold && "font-weight: bold;"} margin-top: 5px;
+  text-align: center;
 `;
 
 const BackgroundImage = styled.Image`

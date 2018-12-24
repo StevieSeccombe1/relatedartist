@@ -4,11 +4,11 @@ import { RefreshControl, ScrollView, View } from "react-native";
 import { observable } from "mobx";
 import { inject, observer } from "mobx-react";
 import ScreenBackground from "../../Common/ScreenBackground";
-import CalendarCard from "../CalendarCard/CalendarCard";
+import RelatedArtistsCard from "../RelatedArtistsCard/RelatedArtistsCard";
 import Loader from "../../Common/Loader";
 import ErrorCard from "../ErrorCard";
 import PushableWrapper from "../../Common/PushableWrapper";
-import NextLaunchCard from "../NextLaunchCard";
+import CurrentArtistCard from "../CurrentArtistCard";
 import HeaderCard from "../HeaderCard";
 import HeaderBack from "../../Common/HeaderBack";
 import { SafeAreaView } from "react-navigation";
@@ -125,7 +125,7 @@ export default class extends Component {
         ) : (
           <View style={{ flex: 1 }}>
             <HeaderCard start={startArtist} end={endArtist} links={links} />
-            <NextLaunchCard
+            <CurrentArtistCard
               title="Current Artist"
               artist={currentArtist}
               image={currentArtistImage}
@@ -152,7 +152,7 @@ export default class extends Component {
                     key={artist.id}
                     onPress={() => this.getRelatedArtists(artist.id)}
                   >
-                    <CalendarCard data={artist} />
+                    <RelatedArtistsCard data={artist} />
                   </PushableWrapper>
                 ))}
               </View>

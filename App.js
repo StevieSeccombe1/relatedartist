@@ -7,8 +7,7 @@ import DashboardScreen from "./src/Components/DashboardScreen";
 import theme from "./src/theme";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { TABS, TABBAR_ICONS } from "./src/constants";
-import LaunchCalendarScreen from "./src/Components/LaunchCalendarScreen";
-import LaunchDetailsScreen from "./src/Components/LaunchDetailsScreen";
+import GameScreen from "./src/Components/GameScreen";
 import { createStackNavigator } from "react-navigation";
 import SearchScreen from "./src/Components/SearchScreen";
 import SettingsScreen from "./src/Components/SettingsScreen";
@@ -25,14 +24,13 @@ const Dashboard = createStackNavigator({
       headerBackTitle: null
     }
   },
-  details: { screen: LaunchDetailsScreen },
-  currentGame: { screen: LaunchCalendarScreen },
+  currentGame: { screen: GameScreen },
   searchScreen: { screen: SearchScreen }
 });
 
-const LaunchCalendar = createStackNavigator({
-  launchCalendar: {
-    screen: LaunchCalendarScreen,
+const Game = createStackNavigator({
+  gameScreen: {
+    screen: GameScreen,
     navigationOptions: {
       title: "Launch calendar",
       header: null,
@@ -50,8 +48,7 @@ const Search = createStackNavigator({
       header: null,
       headerBackTitle: null
     }
-  },
-  details: { screen: LaunchDetailsScreen }
+  }
 });
 
 const Settings = createStackNavigator({
@@ -69,7 +66,7 @@ const Settings = createStackNavigator({
 const Navigation = createBottomTabNavigator(
   {
     [TABS.Home]: Dashboard
-    // [TABS.Calendar]: LaunchCalendar,
+    // [TABS.GameScreen]: GameScreen,
     // [TABS.Search]: Search,
     // [TABS.Settings]: Settings
   },
