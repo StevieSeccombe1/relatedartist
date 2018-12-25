@@ -23,8 +23,8 @@ const ContentWrapper = styled(SafeAreaView)`
 @inject("artists")
 @observer
 class DashboardScreen extends Component {
-  startGame(custom) {
-    if (custom) {
+  startGame(type) {
+    if (type === "custom") {
       this.props.navigation.navigate("searchScreen", { name: "start" });
     } else {
       this.props.navigation.navigate("currentGame", { name: "new" });
@@ -40,9 +40,10 @@ class DashboardScreen extends Component {
         <GameCard
           key={game.id}
           game={game}
-          navigateToGame={() =>
+          navigate={() =>
             this.props.navigation.navigate("currentGame", { game })
           }
+          text="Continue Game"
         />
       ));
     }
@@ -52,10 +53,9 @@ class DashboardScreen extends Component {
         <ScreenTitle title="My Games" />
         <NewGameCard
           name="Custom"
-          navigateToGame={() => this.startGame(true)}
+          navigateToGame={() => this.startGame("custom")}
         />
         <NewGameCard name="Random" navigateToGame={() => this.startGame()} />
-
         <ContentWrapper>
           {state === "loading" ? (
             <Loader />
