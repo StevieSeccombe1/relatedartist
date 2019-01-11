@@ -1,4 +1,4 @@
-package com.spotilink;
+package com.relatedartist;
 
 import android.app.Application;
 

@@ -118,7 +118,7 @@ class SettingsScreen extends Component {
             <Section
               onPress={() =>
                 Linking.openURL(
-                  "https://itunes.apple.com/us/app/spotilink-rocket-launches/id1439376174"
+                  "https://itunes.apple.com/us/app/relatedartist-rocket-launches/id1439376174"
                 )
               }
             >
@@ -135,7 +135,7 @@ class SettingsScreen extends Component {
             <Section
               top
               onPress={() =>
-                Linking.openURL("https://github.com/Illu/spotilink")
+                Linking.openURL("https://github.com/Illu/relatedartist")
               }
             >
               <SectionTitle>Source code</SectionTitle>

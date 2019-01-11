@@ -8,7 +8,6 @@ import RelatedArtistsCard from "../RelatedArtistsCard/RelatedArtistsCard";
 import Loader from "../../Common/Loader";
 import ErrorCard from "../ErrorCard";
 import PushableWrapper from "../../Common/PushableWrapper";
-import HeaderCard from "../HeaderCard";
 import HeaderBack from "../../Common/HeaderBack";
 import { SafeAreaView } from "react-navigation";
 import GameCard from "../GameCard";
