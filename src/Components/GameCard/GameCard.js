@@ -11,8 +11,8 @@ const Wrapper = styled.TouchableOpacity`
 `;
 
 const LinkView = styled.View`
-  alignitems: center;
-  justifycontent: center;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.Text`
