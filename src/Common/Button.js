@@ -50,6 +50,10 @@ const TYPES = {
   red: {
     gradient: ["#FEB692", "#EA5455"],
     shadow: "#EA5455"
+  },
+  black: {
+    gradient: ["#434343", "#434343"],
+    shadow: "#434343"
   }
 };
 

@@ -37,7 +37,7 @@ const BackgroundImage = styled.Image`
 
 export default ({ game, navigate, text }) => {
   let image;
-  if (game.current.images.length !== 0) {
+  if (game.current.images != null && game.current.images.length !== 0) {
     image = game.current.images[0].url;
   }
   return (

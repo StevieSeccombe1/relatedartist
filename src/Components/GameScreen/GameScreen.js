@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Linking, RefreshControl, ScrollView, View } from "react-native";
+import { Linking, ScrollView, View } from "react-native";
 import { observable } from "mobx";
 import { inject, observer } from "mobx-react";
 import ScreenBackground from "../../Common/ScreenBackground";
@@ -11,6 +11,7 @@ import PushableWrapper from "../../Common/PushableWrapper";
 import HeaderBack from "../../Common/HeaderBack";
 import { SafeAreaView } from "react-navigation";
 import GameCard from "../GameCard";
+import Button from "../../Common/Button";
 
 const Wrapper = styled(ScreenBackground)`
   flex: 1;
@@ -62,15 +63,17 @@ export default class extends Component {
       uuid = require("uuid/v4");
       uuid = uuid();
     }
-    const game = {
-      id: uuid,
-      start,
-      end,
-      current,
-      related,
-      links
-    };
-    this.props.artists.storeGame(game);
+    if (start != null) {
+      const game = {
+        id: uuid,
+        start,
+        end,
+        current,
+        related,
+        links
+      };
+      this.props.artists.storeGame(game);
+    }
     this.props.navigation.navigate("dashboard");
   }
 
@@ -168,6 +171,11 @@ export default class extends Component {
                   </PushableWrapper>
                 ))}
               </View>
+              <Button
+                title="Give Up"
+                onPress={() => this.goBack(null, null, null, null, null, null)}
+                type="black"
+              />
             </ScrollView>
           </View>
         ) : (
