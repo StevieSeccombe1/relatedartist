@@ -62,16 +62,7 @@ class DashboardScreen extends Component {
           ) : state === "error" ? (
             <ErrorCard />
           ) : (
-            <ScrollView
-              refreshControl={
-                <RefreshControl
-                  refreshing={state === "loading"}
-                  tintColor="#fff"
-                />
-              }
-            >
-              {games}
-            </ScrollView>
+            <ScrollView>{games}</ScrollView>
           )}
         </ContentWrapper>
       </Wrapper>

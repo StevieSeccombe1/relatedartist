@@ -5,7 +5,7 @@ const Wrapper = styled.View`
     border-radius: 15px
     padding: 10px;
     width: 125px;
-    height: 125px;
+    height: auto;
     align-items: center;
 `;
 

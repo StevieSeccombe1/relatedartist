@@ -113,6 +113,12 @@ export default class extends Component {
             ScreenTitle="You Won"
             navigateBack={() => this.props.navigation.navigate("dashboard")}
           />
+          <GameCard
+            key={game.id}
+            game={game}
+            navigate={() => Linking.openURL(game.current.external_urls.spotify)}
+            text="Listen on Spotify"
+          />
         </Wrapper>
       );
     }
@@ -142,15 +148,7 @@ export default class extends Component {
               }
               text="Listen on Spotify"
             />
-            <ScrollView
-              contentContainerStyle={{ alignItems: "center" }}
-              refreshControl={
-                <RefreshControl
-                  refreshing={data.state === "loading"}
-                  tintColor="#fff"
-                />
-              }
-            >
+            <ScrollView contentContainerStyle={{ alignItems: "center" }}>
               <Title>Select your next link</Title>
               <View
                 style={{
