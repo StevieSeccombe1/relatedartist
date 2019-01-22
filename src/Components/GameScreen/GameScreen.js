@@ -77,6 +77,12 @@ export default class extends Component {
     this.props.navigation.navigate("dashboard");
   }
 
+  restart() {
+    this.props.artists.currentArtist = this.props.artists.startArtist;
+    this.props.artists.links = 0;
+    this.counter = 0;
+  }
+
   render() {
     const data = this.props.artists;
     const currentArtist = this.props.artists.currentArtist;
@@ -171,11 +177,28 @@ export default class extends Component {
                   </PushableWrapper>
                 ))}
               </View>
-              <Button
-                title="Give Up"
-                onPress={() => this.goBack(null, null, null, null, null, null)}
-                type="black"
-              />
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexWrap: "wrap"
+                }}
+              >
+                <Button
+                  title="Give Up"
+                  onPress={() =>
+                    this.goBack(null, null, null, null, null, null)
+                  }
+                  type="black"
+                />
+                <Button
+                  title="Restart"
+                  onPress={() => this.restart()}
+                  type="secondary"
+                />
+              </View>
             </ScrollView>
           </View>
         ) : (

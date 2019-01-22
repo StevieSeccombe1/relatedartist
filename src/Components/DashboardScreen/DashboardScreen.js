@@ -32,6 +32,12 @@ class DashboardScreen extends Component {
     }
   }
 
+  restart(game) {
+    game.current = game.start;
+    game.links = 0;
+    this.props.navigation.navigate("currentGame", { game });
+  }
+
   render() {
     const { state } = this.props.artists;
     const gameList = this.props.artists.games;
@@ -43,6 +49,11 @@ class DashboardScreen extends Component {
             text: "Delete",
             backgroundColor: "#434343",
             onPress: () => this.props.artists.removeGame(game)
+          },
+          {
+            text: "Restart",
+            backgroundColor: "#2c2f53",
+            onPress: () => this.restart(game)
           }
         ];
         return (
