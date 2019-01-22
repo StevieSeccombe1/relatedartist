@@ -1,7 +1,6 @@
-import { action, computed, decorate, observable, autorun } from "mobx";
-import { AsyncStorage, PushNotificationIOS } from "react-native";
+import { action, observable } from "mobx";
 import "url-search-params-polyfill";
-import { API_URL, ARTIST, SEARCH, TOKEN_URL } from "../../cfg";
+import { ARTIST, SEARCH, TOKEN_URL } from "../../cfg";
 import spotifyIcon from "../Assets/spotify.png";
 
 export default class ArtistsModel {
@@ -143,6 +142,13 @@ export default class ArtistsModel {
     } else {
       this.games.push(game);
     }
+  };
+
+  @action
+  removeGame = game => {
+    const games = this.games;
+    const chosenGame = games.find(chosenGame => game.id === chosenGame.id);
+    this.games.splice(games.indexOf(chosenGame), 1);
   };
 
   @action

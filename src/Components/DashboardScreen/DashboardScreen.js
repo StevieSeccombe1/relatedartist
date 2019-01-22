@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { SafeAreaView } from "react-navigation";
-import { RefreshControl, ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { inject, observer } from "mobx-react";
 import ScreenBackground from "../../Common/ScreenBackground";
 import ScreenTitle from "../../Common/ScreenTitle";
@@ -9,6 +9,7 @@ import ErrorCard from "../ErrorCard";
 import Loader from "../../Common/Loader";
 import NewGameCard from "../NewGameCard/NewGameCard";
 import GameCard from "../GameCard";
+import Swipeout from "react-native-swipeout";
 
 const Wrapper = styled(ScreenBackground)`
   flex: 1;
@@ -36,16 +37,26 @@ class DashboardScreen extends Component {
     const gameList = this.props.artists.games;
     let games = [];
     if (gameList.length > 0) {
-      games = gameList.map(game => (
-        <GameCard
-          key={game.id}
-          game={game}
-          navigate={() =>
-            this.props.navigation.navigate("currentGame", { game })
+      games = gameList.map(game => {
+        const swipeoutBtns = [
+          {
+            text: "Delete",
+            backgroundColor: "#434343",
+            onPress: () => this.props.artists.removeGame(game)
           }
-          text="Continue Game"
-        />
-      ));
+        ];
+        return (
+          <Swipeout right={swipeoutBtns} key={game.id} backgroundColor="#">
+            <GameCard
+              game={game}
+              navigate={() =>
+                this.props.navigation.navigate("currentGame", { game })
+              }
+              text="Continue Game"
+            />
+          </Swipeout>
+        );
+      });
     }
 
     return (
