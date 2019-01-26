@@ -34,6 +34,12 @@ export default class ArtistsModel {
   @observable
   links = 0;
 
+  @observable
+  startGenre;
+
+  @observable
+  endGenre;
+
   @action
   getToken = () => {
     const searchParams = new URLSearchParams();
@@ -70,11 +76,11 @@ export default class ArtistsModel {
   };
 
   @action
-  getRandomArtist = (numberOfArtists, token) => {
+  getRandomArtist = (numberOfArtists, token, genre) => {
     const offset = Math.floor(Math.random() * numberOfArtists + 1);
     return fetch(
       SEARCH +
-        `?q=genre%3Ametal%20year%3A2001&type=artist&limit=1&offset=${offset}`,
+        `?q=genre%3A${genre}%20year%3A2001&type=artist&limit=1&offset=${offset}`,
       {
         method: "get",
         headers: new Headers({
@@ -166,9 +172,6 @@ export default class ArtistsModel {
           })
           .catch(err => {
             this.state = "error";
-          })
-          .catch(err => {
-            this.state = "error";
           });
       })
       .catch(err => {
@@ -219,7 +222,7 @@ export default class ArtistsModel {
 
   @action
   getStartingArtist = (numberOfArtists, token) => {
-    this.getRandomArtist(numberOfArtists, token)
+    this.getRandomArtist(numberOfArtists, token, this.startGenre)
       .then(data => data.json())
       .then(data => {
         const artist = data.artists.items[0];
@@ -244,7 +247,7 @@ export default class ArtistsModel {
 
   @action
   getEndingArtist = (numberOfArtists, token) => {
-    this.getRandomArtist(numberOfArtists, token)
+    this.getRandomArtist(numberOfArtists, token, this.endGenre)
       .then(data => data.json())
       .then(data => {
         this.endArtist = data.artists.items[0];

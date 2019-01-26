@@ -41,10 +41,6 @@ export default class extends Component {
   componentDidMount() {
     if (this.props.navigation.getParam("game")) {
       this.props.artists.continueGame(this.props.navigation.getParam("game"));
-    } else if (this.props.navigation.getParam("name") === "new") {
-      this.props.artists.startRandomNewGame();
-    } else {
-      this.props.artists.startNewGame();
     }
   }
 

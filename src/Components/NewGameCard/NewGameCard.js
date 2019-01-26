@@ -20,11 +20,11 @@ const Title = styled.Text`
   font-size: 24px;
 `;
 
-export default ({ name, navigateToGame }) => {
+export default ({ navigateToGame }) => {
   return (
     <PushableWrapper style={{ height: 75 }} onPress={navigateToGame}>
       <Wrapper>
-        <Title>New {name} Game</Title>
+        <Title>New Game</Title>
         <Icon name="plus" size={24} color="#fff" />
       </Wrapper>
     </PushableWrapper>

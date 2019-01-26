@@ -10,6 +10,7 @@ import Loader from "../../Common/Loader";
 import NewGameCard from "../NewGameCard/NewGameCard";
 import GameCard from "../GameCard";
 import Swipeout from "react-native-swipeout";
+import Button from "../../Common/Button";
 
 const Wrapper = styled(ScreenBackground)`
   flex: 1;
@@ -24,14 +25,6 @@ const ContentWrapper = styled(SafeAreaView)`
 @inject("artists")
 @observer
 class DashboardScreen extends Component {
-  startGame(type) {
-    if (type === "custom") {
-      this.props.navigation.navigate("searchScreen", { name: "start" });
-    } else {
-      this.props.navigation.navigate("currentGame", { name: "new" });
-    }
-  }
-
   restart(game) {
     game.current = game.start;
     game.links = 0;
@@ -72,12 +65,7 @@ class DashboardScreen extends Component {
 
     return (
       <Wrapper>
-        <ScreenTitle title="My Games" />
-        <NewGameCard
-          name="Custom"
-          navigateToGame={() => this.startGame("custom")}
-        />
-        <NewGameCard name="Random" navigateToGame={() => this.startGame()} />
+        <ScreenTitle noBackgroundText="true" title="My Games" />
         <ContentWrapper>
           {state === "loading" ? (
             <Loader />
@@ -87,6 +75,14 @@ class DashboardScreen extends Component {
             <ScrollView>{games}</ScrollView>
           )}
         </ContentWrapper>
+        <Button
+          title="New Game"
+          onPress={() =>
+            this.props.navigation.navigate("searchScreen", { name: "start" })
+          }
+          type="black"
+          icon="plus"
+        />
       </Wrapper>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { inject, observer } from "mobx-react";
 
 const Wrapper = styled.TextInput`
   width: 80%;
@@ -10,7 +11,8 @@ const Wrapper = styled.TextInput`
   margin: 20px;
   color: white;
 `;
-
+@inject("search")
+@observer
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +23,14 @@ class SearchBar extends Component {
 
   search(searchStr) {
     this.props.searchArtists(searchStr);
-    this.state.searchStr = null;
+  }
+
+  checkText(searchStr) {
+    if (searchStr === "") {
+      this.props.search.totalResults = 0;
+      this.props.search.results = [];
+    }
+    this.setState({ searchStr });
   }
 
   render() {
@@ -30,10 +39,11 @@ class SearchBar extends Component {
       <Wrapper
         value={searchStr}
         placeholder={`pick your ${this.props.name} artist...`}
+        autoCorrect={false}
         placeholderTextColor="#777"
         returnKeyType="search"
         clearButtonMode="always"
-        onChangeText={searchStr => this.setState({ searchStr })}
+        onChangeText={searchStr => this.checkText(searchStr)}
         onSubmitEditing={() => this.search(searchStr)}
       />
     );
