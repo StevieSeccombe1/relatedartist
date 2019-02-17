@@ -33,7 +33,7 @@ const BackgroundImage = styled.Image`
 `;
 
 export default ({ data }) => {
-  let image = require("../../Assets/spotify.png");
+  let image = require("../../Assets/relatedIcon.png");
   if (data.images.length !== 0) {
     image = {
       uri: data.images[data.images.length - 1].url

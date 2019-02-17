@@ -7,7 +7,6 @@ import ScreenBackground from "../../Common/ScreenBackground";
 import ScreenTitle from "../../Common/ScreenTitle";
 import ErrorCard from "../ErrorCard";
 import Loader from "../../Common/Loader";
-import NewGameCard from "../NewGameCard/NewGameCard";
 import GameCard from "../GameCard";
 import Swipeout from "react-native-swipeout";
 import Button from "../../Common/Button";

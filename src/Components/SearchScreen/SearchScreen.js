@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { View, Picker } from "react-native";
+import { Alert, Picker, View } from "react-native";
 import { SafeAreaView } from "react-navigation";
 import ScreenBackground from "../../Common/ScreenBackground";
 import Searchbar from "../../Common/Searchbar";
@@ -10,6 +10,7 @@ import RelatedArtistsCard from "../RelatedArtistsCard/RelatedArtistsCard";
 import PushableWrapper from "../../Common/PushableWrapper";
 import HeaderBack from "../../Common/HeaderBack";
 import Button from "../../Common/Button";
+import decades from "../../Assets/decades";
 
 const Wrapper = styled(ScreenBackground)`
   flex: 1;
@@ -20,6 +21,7 @@ const ContentWrapper = styled(SafeAreaView)`
   flex: 1;
   width: 100%;
   align-items: center;
+  padding: 40px 0 0 0;
 `;
 
 const ScrollWrapper = styled.ScrollView`
@@ -32,6 +34,8 @@ const Desc = styled.Text`
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 10px;
+  text-align: center;
+  width: 80%;
 `;
 
 const ResultCount = styled.Text`
@@ -47,9 +51,11 @@ export default class SearchScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      decade: "80s"
+      decade: "1950-1959",
+      genre: "acoustic"
     };
   }
+
   static navigationOptions = {
     title: "Setup Game",
     headerStyle: {
@@ -60,6 +66,7 @@ export default class SearchScreen extends Component {
   };
 
   componentDidMount() {
+    this.props.search.getGenres();
     this.reset();
   }
 
@@ -79,36 +86,26 @@ export default class SearchScreen extends Component {
     }
   }
 
-  setupRandomGame(genre) {
-    if (this.props.navigation.getParam("name") === "end") {
-      this.props.artists.endGenre = genre;
-      this.props.artists.startRandomNewGame();
-      this.props.navigation.navigate("currentGame");
-    } else {
-      this.props.artists.startGenre = genre;
-      this.reset();
-      this.props.navigation.navigate("searchScreen", { name: "end" });
-    }
-  }
-
   reset() {
+    this.props.search.state = "idle";
     this.props.search.totalResults = 0;
     this.props.search.results = [];
   }
 
   render() {
-    const { results, searchArtists, totalResults, state } = this.props.search;
+    const {
+      results,
+      searchArtists,
+      totalResults,
+      state,
+      genres
+    } = this.props.search;
     const name = this.props.navigation.getParam("name");
-    const genres = [
-      "metal",
-      "rock",
-      "pop",
-      "jazz",
-      "rap",
-      "blues",
-      "classical"
-    ];
-    const { decade } = this.state;
+    const { decade, genre } = this.state;
+    let desc = "Search for a start artist or choose a genre and year below";
+    if (this.props.navigation.getParam("name") === "end") {
+      desc = "Now search for an end artist or choose a genre and year below";
+    }
     return (
       <Wrapper>
         <HeaderBack
@@ -116,68 +113,114 @@ export default class SearchScreen extends Component {
           navigateBack={() => this.props.navigation.goBack()}
         />
         <ContentWrapper>
-          <Desc>Search for an artist or choose a genre and year below</Desc>
+          <Desc>{desc}</Desc>
           <Searchbar name={name} searchArtists={str => searchArtists(str)} />
           <ResultCount>{totalResults || 0} results</ResultCount>
-          <ScrollWrapper>
-            {state === "loading" && <Loader />}
-            {totalResults === 0 && (
-              <>
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexWrap: "wrap"
-                  }}
+          {state === "loading" && <Loader />}
+          {results.length > 1 && state === "success" && (
+            <ScrollWrapper>
+              <View
+                style={{
+                  flex: 1,
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexWrap: "wrap"
+                }}
+              >
+                {results.map(artist => (
+                  <PushableWrapper
+                    key={artist.id}
+                    onPress={() => this.setupGame(artist)}
+                  >
+                    <RelatedArtistsCard data={artist} />
+                  </PushableWrapper>
+                ))}
+              </View>
+            </ScrollWrapper>
+          )}
+          {results.length === 1 && state === "success" && (
+            <View
+              style={{
+                flex: 1,
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap"
+              }}
+            >
+              {results.map(artist => (
+                <PushableWrapper
+                  key={artist.id}
+                  onPress={() => this.setupGame(artist)}
+                >
+                  <RelatedArtistsCard data={artist} />
+                </PushableWrapper>
+              ))}
+            </View>
+          )}
+          {state === "error" &&
+            Alert.alert(
+              "Sorry",
+              "No artists found with that selection, please try a different genre and/or decade",
+              [{ text: "OK", onPress: () => this.reset() }],
+              { cancelable: true }
+            )}
+          {results.length <= 1 && state !== "error" && (
+            <>
+              <View
+                style={{
+                  flex: 1,
+                  alignItems: "center",
+                  flexWrap: "wrap"
+                }}
+              >
+                <Picker
+                  selectedValue={genre}
+                  style={{ width: 200 }}
+                  onValueChange={(itemValue, itemIndex) =>
+                    this.setState({ genre: itemValue })
+                  }
+                  itemStyle={{ color: "white" }}
                 >
                   {genres.map(genre => (
-                    <PushableWrapper key={genres.indexOf(genre)}>
-                      <Button
-                        title={genre}
-                        type="black"
-                        onPress={() => this.setupRandomGame(genre)}
-                      />
-                    </PushableWrapper>
+                    <Picker.Item
+                      key={genre.value}
+                      label={genre.label}
+                      value={genre.value}
+                    />
                   ))}
-                  <Picker
-                    selectedValue={decade}
-                    style={{ height: 50, width: 100 }}
-                    onValueChange={(itemValue, itemIndex) =>
-                      this.setState({ decade: itemValue })
-                    }
-                    itemStyle={{ color: "white" }}
-                  >
-                    <Picker.Item label="70s" value="70s" />
-                    <Picker.Item label="80s" value="80s" />
-                  </Picker>
-                </View>
-              </>
-            )}
-            {results.length >= 0 && state === "success" && (
-              <>
-                <View
-                  style={{
-                    flex: 1,
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexWrap: "wrap"
-                  }}
+                </Picker>
+                <Picker
+                  selectedValue={decade}
+                  style={{ width: 100 }}
+                  onValueChange={(itemValue, itemIndex) =>
+                    this.setState({ decade: itemValue })
+                  }
+                  itemStyle={{ color: "white" }}
                 >
-                  {results.map(artist => (
-                    <PushableWrapper
-                      key={artist.id}
-                      onPress={() => this.setupGame(artist)}
-                    >
-                      <RelatedArtistsCard data={artist} />
-                    </PushableWrapper>
+                  {decades.map(decade => (
+                    <Picker.Item
+                      key={decade.value}
+                      label={decade.label}
+                      value={decade.value}
+                    />
                   ))}
-                </View>
-              </>
-            )}
-          </ScrollWrapper>
+                </Picker>
+              </View>
+              <Button
+                style={{ width: "100%" }}
+                title="Get Random Artist"
+                type="black"
+                onPress={() =>
+                  this.props.search.searchRandomArtist(
+                    this.state.genre,
+                    this.state.decade
+                  )
+                }
+              />
+            </>
+          )}
         </ContentWrapper>
       </Wrapper>
     );

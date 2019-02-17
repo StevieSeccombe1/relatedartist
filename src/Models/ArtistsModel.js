@@ -1,7 +1,7 @@
 import { action, observable } from "mobx";
 import "url-search-params-polyfill";
 import { ARTIST, SEARCH, TOKEN_URL } from "../../cfg";
-import spotifyIcon from "../Assets/spotify.png";
+import relatedIcon from "../Assets/relatedIcon.png";
 
 export default class ArtistsModel {
   @observable
@@ -20,9 +20,6 @@ export default class ArtistsModel {
   currentArtistImage;
 
   @observable
-  randomArtist = [];
-
-  @observable
   games = [];
 
   @observable
@@ -33,12 +30,6 @@ export default class ArtistsModel {
 
   @observable
   links = 0;
-
-  @observable
-  startGenre;
-
-  @observable
-  endGenre;
 
   @action
   getToken = () => {
@@ -66,31 +57,6 @@ export default class ArtistsModel {
   };
 
   @action
-  getArtists = token => {
-    return fetch(SEARCH + "?q=genre%3Ametal%20year%3A2001&type=artist", {
-      method: "get",
-      headers: new Headers({
-        Authorization: `Bearer ${token}`
-      })
-    });
-  };
-
-  @action
-  getRandomArtist = (numberOfArtists, token, genre) => {
-    const offset = Math.floor(Math.random() * numberOfArtists + 1);
-    return fetch(
-      SEARCH +
-        `?q=genre%3A${genre}%20year%3A2001&type=artist&limit=1&offset=${offset}`,
-      {
-        method: "get",
-        headers: new Headers({
-          Authorization: `Bearer ${token}`
-        })
-      }
-    );
-  };
-
-  @action
   getRelatedArtists = (id, token) => {
     return fetch(ARTIST + id + "/related-artists", {
       method: "get",
@@ -111,7 +77,7 @@ export default class ArtistsModel {
           .then(data => data.json())
           .then(data => {
             this.currentArtist = data;
-            this.currentArtistImage = spotifyIcon;
+            this.currentArtistImage = relatedIcon;
             if (data.images.length !== 0) {
               this.currentArtistImage = data.images[0].url;
             }
@@ -169,37 +135,6 @@ export default class ArtistsModel {
           .then(data => {
             this.relatedArtists = data.artists;
             this.state = "success";
-          })
-          .catch(err => {
-            this.state = "error";
-          });
-      })
-      .catch(err => {
-        this.state = "error";
-      });
-  };
-
-  @action
-  startRandomNewGame = () => {
-    this.id = null;
-    this.state = "loading";
-    this.getToken()
-      .then(data => data.json())
-      .then(data => {
-        const token = data.access_token;
-        this.getArtists(token)
-          .then(data => data.json())
-          .then(data => {
-            Promise.all([
-              this.getStartingArtist(data.artists.total, token),
-              this.getEndingArtist(data.artists.total, token)
-            ])
-              .then(() => {
-                this.state = "success";
-              })
-              .catch(err => {
-                this.state = "error";
-              });
           })
           .catch(err => {
             this.state = "error";

@@ -6,7 +6,7 @@ export const TABS = {
 };
 
 export const TABBAR_ICONS = {
-  [TABS.Home]: "spotify",
+  [TABS.Home]: "play",
   [TABS.GameScreen]: "calendar",
   [TABS.Search]: "search",
   [TABS.Settings]: "cog"

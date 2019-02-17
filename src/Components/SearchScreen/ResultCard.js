@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import spotifyIcon from "../../Assets/spotify.png";
+import relatedIcon from "../../Assets/relatedIcon.png";
 import { View } from "react-native";
 import PushableWrapper from "../../Common/PushableWrapper";
 
@@ -48,7 +48,6 @@ class ResultCard extends Component {
     if (artist.images.length !== 0) {
       image = artist.images[artist.images.length - 1].url;
     }
-    // onPress={() => this.props.showDetails(this.props.data)}
     return (
       <PushableWrapper style={{ height: 100 }}>
         <Wrapper>
@@ -56,7 +55,7 @@ class ResultCard extends Component {
             <Title>{artist.name}</Title>
           </View>
           <ImageWrapper>
-            <BackgroundImage source={{ uri: image } || spotifyIcon} />
+            <BackgroundImage source={{ uri: image } || relatedIcon} />
           </ImageWrapper>
         </Wrapper>
       </PushableWrapper>
