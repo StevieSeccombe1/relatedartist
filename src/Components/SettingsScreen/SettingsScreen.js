@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Switch, Linking, TouchableOpacity } from "react-native";
+import { Linking } from "react-native";
 import { SafeAreaView } from "react-navigation";
-import { observer, inject } from "mobx-react";
+import { observer } from "mobx-react";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { version } from "../../../package.json";
 import ScreenBackground from "../../Common/ScreenBackground";
@@ -54,88 +54,36 @@ const Credits = styled.Text`
   margin-bottom: 22px;
 `;
 
-const hitSlopValue = 60;
-const touchableHitSlop = {
-  top: hitSlopValue / 2,
-  left: hitSlopValue,
-  right: hitSlopValue,
-  bottom: hitSlopValue / 2
-};
-
-@inject("artists")
 @observer
 class SettingsScreen extends Component {
-  state = {
-    secret: false
-  };
-
   render() {
-    const { launches } = this.props;
-    const { notifications } = launches;
-    const { secret } = this.state;
     return (
       <Wrapper>
         <ContentWrapper>
           <ScreenTitle title="Settings" />
           <SectionsWrapper>
-            <Section top>
-              <SectionTitle>Notify me</SectionTitle>
-              <Switch
-                value={notifications.enabled}
-                onValueChange={() => this.props.artists.toggleNotifications()}
-              />
-            </Section>
-            <Section
-              bottom
-              disabled={!notifications.enabled}
-              style={{ justifyContent: "space-around" }}
-            >
-              <TouchableOpacity
-                disabled={!notifications.enabled}
-                onPress={() => launches.changeNotificationDelay(-5)}
-                hitSlop={touchableHitSlop}
-              >
-                <Icon name="minus" size={18} color="#fff" />
-              </TouchableOpacity>
-              <SectionTitle>
-                {notifications.delay} min ahead of a launch
-              </SectionTitle>
-              <TouchableOpacity
-                disabled={!notifications.enabled}
-                onPress={() => launches.changeNotificationDelay(5)}
-                hitSlop={touchableHitSlop}
-              >
-                <Icon name="plus" size={18} color="#fff" />
-              </TouchableOpacity>
-            </Section>
             <Section
               top
-              onPress={() => Linking.openURL("https://twitter.com/maximenory")}
-            >
-              <SectionTitle>Say hi 👋</SectionTitle>
-              <Icon name="twitter" size={22} color="#fff" />
-            </Section>
-            <Section
-              onPress={() =>
-                Linking.openURL(
-                  "https://itunes.apple.com/us/app/relatedartist-rocket-launches/id1439376174"
-                )
-              }
-            >
-              <SectionTitle>Give your feedback</SectionTitle>
-              <Icon name="app-store-ios" size={22} color="#fff" />
-            </Section>
-            <Section
-              bottom
               onPress={() => Linking.openURL("https://paypal.me/maximenory")}
             >
-              <SectionTitle>Buy me a coffee</SectionTitle>
+              <SectionTitle>Buy this guy a coffee</SectionTitle>
               <Icon name="coffee" size={22} color="#fff" />
             </Section>
             <Section
+              bottom
+              onPress={() =>
+                Linking.openURL("https://paypal.me/StevieSeccombe")
+              }
+            >
+              <SectionTitle>Buy me a beer</SectionTitle>
+              <Icon name="beer" size={22} color="#fff" />
+            </Section>
+            <Section
               top
               onPress={() =>
-                Linking.openURL("https://github.com/Illu/relatedartist")
+                Linking.openURL(
+                  "https://github.com/StevieSeccombe1/relatedartist"
+                )
               }
             >
               <SectionTitle>Source code</SectionTitle>
@@ -148,19 +96,11 @@ class SettingsScreen extends Component {
               <SectionTitle>Licenses</SectionTitle>
               <Icon name="chevron-right" size={22} color="#fff" />
             </Section>
-            <Section
-              top
-              bottom
-              onPress={() => this.setState({ secret: !secret })}
-            >
+            <Section top bottom>
               <SectionTitle>About</SectionTitle>
-              {secret ? (
-                <Icon name="user-secret" size={30} color="#ffec2a" />
-              ) : (
-                <SectionTitle>Version {version}</SectionTitle>
-              )}
+              <SectionTitle>Version {version}</SectionTitle>
             </Section>
-            <Credits>2018 - Maxime Nory</Credits>
+            <Credits>2019 - Stevie Seccombe</Credits>
           </SectionsWrapper>
         </ContentWrapper>
       </Wrapper>

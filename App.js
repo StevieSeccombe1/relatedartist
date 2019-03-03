@@ -28,29 +28,6 @@ const Dashboard = createStackNavigator({
   searchScreen: { screen: SearchScreen }
 });
 
-const Game = createStackNavigator({
-  gameScreen: {
-    screen: GameScreen,
-    navigationOptions: {
-      title: "Launch calendar",
-      header: null,
-      headerBackTitle: null
-    }
-  },
-  dashboard: { screen: DashboardScreen }
-});
-
-const Search = createStackNavigator({
-  search: {
-    screen: SearchScreen,
-    navigationOptions: {
-      title: "Search",
-      header: null,
-      headerBackTitle: null
-    }
-  }
-});
-
 const Settings = createStackNavigator({
   search: {
     screen: SettingsScreen,
@@ -65,10 +42,8 @@ const Settings = createStackNavigator({
 
 const Navigation = createBottomTabNavigator(
   {
-    [TABS.Home]: Dashboard
-    // [TABS.GameScreen]: GameScreen,
-    // [TABS.Search]: Search,
-    // [TABS.Settings]: Settings
+    [TABS.Home]: Dashboard,
+    [TABS.Settings]: Settings
   },
   {
     navigationOptions: ({ navigation }) => ({
