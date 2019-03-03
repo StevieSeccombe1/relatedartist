@@ -11,6 +11,7 @@ import PushableWrapper from "../../Common/PushableWrapper";
 import HeaderBack from "../../Common/HeaderBack";
 import Button from "../../Common/Button";
 import decades from "../../Assets/decades";
+import ErrorCard from "../ErrorCard";
 
 const Wrapper = styled(ScreenBackground)`
   flex: 1;
@@ -159,13 +160,15 @@ export default class SearchScreen extends Component {
               ))}
             </View>
           )}
-          {state === "error" &&
-            Alert.alert(
-              "Sorry",
-              "No artists found with that selection, please try a different genre and/or decade",
-              [{ text: "OK", onPress: () => this.reset() }],
-              { cancelable: true }
-            )}
+          {state === "error" && (
+            <ErrorCard
+              text="Cannot load results or search criteria"
+              onPress={() => {
+                this.props.search.getGenres();
+                this.reset();
+              }}
+            />
+          )}
           {results.length <= 1 && state !== "error" && (
             <>
               <View

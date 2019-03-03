@@ -48,52 +48,43 @@ export default class extends Component {
     this.counter = this.counter + 1;
   };
 
-  getRelatedArtists(id) {
+  getRelatedArtists(artist, game) {
     this.increment();
-    this.props.artists.getCurrentArtist(id);
+    game.links = game.links + 1;
+    game.current = artist;
+    this.props.artists.storeGame(game);
+    this.props.artists.getCurrentArtist(artist.id);
   }
 
-  goBack(id, start, end, current, related, links) {
-    let uuid = id;
-    if (!uuid) {
-      uuid = require("uuid/v4");
-      uuid = uuid();
-    }
-    if (start != null) {
-      const game = {
-        id: uuid,
-        start,
-        end,
-        current,
-        related,
-        links
-      };
-      this.props.artists.storeGame(game);
-    }
+  goBack(game) {
+    this.props.artists.storeGame(game);
     this.props.navigation.navigate("dashboard");
   }
 
-  restart() {
+  deleteGame(game) {
+    this.props.artists.removeGame(game);
+    this.props.navigation.navigate("dashboard");
+  }
+
+  restart(game) {
     this.props.artists.currentArtist = this.props.artists.startArtist;
     this.props.artists.links = 0;
     this.counter = 0;
+    game.current = this.props.artists.startArtist;
+    game.links = 0;
+    this.props.artists.storeGame(game);
   }
 
   render() {
     const data = this.props.artists;
-    const currentArtist = this.props.artists.currentArtist;
-    const currentArtistImage = this.props.artists.currentArtistImage;
-    const endArtist = this.props.artists.endArtist;
-    const startArtist = this.props.artists.startArtist;
-    const relatedArtists = this.props.artists.relatedArtists;
-    const id = this.props.artists.id;
     let links = this.props.artists.links;
     links = links + this.counter;
     const game = {
-      id: id,
-      current: currentArtist,
-      end: endArtist,
-      start: startArtist,
+      id: this.props.artists.id,
+      current: this.props.artists.currentArtist,
+      end: this.props.artists.endArtist,
+      start: this.props.artists.startArtist,
+      related: this.props.artists.relatedArtists,
       links: links
     };
 
@@ -105,7 +96,7 @@ export default class extends Component {
               ScreenTitle="Current Game"
               navigateBack={() => this.props.navigation.navigate("dashboard")}
             />
-            <ErrorCard onPress={this.getRelatedArtists(currentArtist.id)} />
+            <ErrorCard onPress={this.getRelatedArtists(game.current, game)} />
           </SafeAreaView>
         </Wrapper>
       );
@@ -116,7 +107,7 @@ export default class extends Component {
         <Wrapper>
           <HeaderBack
             ScreenTitle="You Won"
-            navigateBack={() => this.props.navigation.navigate("dashboard")}
+            navigateBack={() => this.deleteGame(game)}
           />
           <GameCard
             key={game.id}
@@ -132,16 +123,7 @@ export default class extends Component {
       <Wrapper>
         <HeaderBack
           ScreenTitle="Current Game"
-          navigateBack={() =>
-            this.goBack(
-              id,
-              startArtist,
-              endArtist,
-              currentArtist,
-              relatedArtists,
-              links
-            )
-          }
+          navigateBack={() => this.goBack(game)}
         />
         {data.state === "success" && game.current.id ? (
           <View style={{ flex: 1 }}>
@@ -164,10 +146,10 @@ export default class extends Component {
                   flexWrap: "wrap"
                 }}
               >
-                {relatedArtists.map(artist => (
+                {game.related.map(artist => (
                   <PushableWrapper
                     key={artist.id}
-                    onPress={() => this.getRelatedArtists(artist.id)}
+                    onPress={() => this.getRelatedArtists(artist, game)}
                   >
                     <RelatedArtistsCard data={artist} />
                   </PushableWrapper>
@@ -184,14 +166,12 @@ export default class extends Component {
               >
                 <Button
                   title="Give Up"
-                  onPress={() =>
-                    this.goBack(null, null, null, null, null, null)
-                  }
+                  onPress={() => this.deleteGame(game)}
                   type="black"
                 />
                 <Button
                   title="Restart"
-                  onPress={() => this.restart()}
+                  onPress={() => this.restart(game)}
                   type="secondary"
                 />
               </View>

@@ -26,7 +26,6 @@ const Title = styled.Text`
   color: #efefef;
   font-size: ${props => props.fontSize};
   font-weight: bold;
-  margin-left: 10px;
   text-align: center;
 `;
 
@@ -77,7 +76,14 @@ export default ({
       start={{ x: 0.0, y: 0.0 }}
       end={{ x: 1.0, y: 0.0 }}
     >
-      {icon && <Icon name={icon} size={25} color="#efefef" />}
+      {icon && (
+        <Icon
+          style={{ marginRight: 10 }}
+          name={icon}
+          size={25}
+          color="#efefef"
+        />
+      )}
       {title && <Title fontSize={fontSize}>{title}</Title>}
     </Wrapper>
   </TouchableWrapper>

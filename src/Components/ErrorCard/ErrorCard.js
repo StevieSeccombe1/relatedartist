@@ -23,6 +23,7 @@ const Subtitle = styled.Text`
   color: white;
   font-size: 15px;
   margin: 10px 0 20px 0;
+  text-align: center;
 `;
 
 export default class extends Component {
@@ -58,7 +59,7 @@ export default class extends Component {
         <Icon name="exclamation" size={35} color="white" />
         <Title>Something's wrong</Title>
         <Subtitle>{text} || Error while fetching data</Subtitle>
-        <Button onPress={onPress} type="secondary" title="Retry" />
+        <Button onPress={onPress} type="black" title="Retry" />
       </Wrapper>
     );
   }

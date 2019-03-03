@@ -112,8 +112,13 @@ export default class ArtistsModel {
       currentGame.links = game.links;
       this.games.replace(games);
     } else {
+      let uuid;
+      uuid = require("uuid/v4");
+      uuid = uuid();
+      game.id = uuid;
       this.games.push(game);
     }
+    this.id = game.id;
   };
 
   @action
