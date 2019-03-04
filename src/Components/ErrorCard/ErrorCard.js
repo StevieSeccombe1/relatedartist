@@ -58,7 +58,7 @@ export default class extends Component {
       >
         <Icon name="exclamation" size={35} color="white" />
         <Title>Something's wrong</Title>
-        <Subtitle>{text} || Error while fetching data</Subtitle>
+        <Subtitle>{text} - Error while fetching data</Subtitle>
         <Button onPress={onPress} type="black" title="Retry" />
       </Wrapper>
     );

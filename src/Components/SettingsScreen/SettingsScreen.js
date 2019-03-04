@@ -19,7 +19,7 @@ const ContentWrapper = styled(SafeAreaView)`
 
 const SectionsWrapper = styled.ScrollView`
   padding: 0 25px;
-  margin-top: 30px;
+  margin-top: 10px;
 `;
 
 const Section = styled.TouchableOpacity`
@@ -60,7 +60,7 @@ class SettingsScreen extends Component {
     return (
       <Wrapper>
         <ContentWrapper>
-          <ScreenTitle title="Settings" />
+          <ScreenTitle noBackgroundText="true" title="Settings" />
           <SectionsWrapper>
             <Section
               top

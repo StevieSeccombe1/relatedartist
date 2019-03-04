@@ -22,7 +22,7 @@ const ContentWrapper = styled(SafeAreaView)`
   flex: 1;
   width: 100%;
   align-items: center;
-  padding: 40px 0 0 0;
+  padding: 10px 0 0 0;
 `;
 
 const ScrollWrapper = styled.ScrollView`
@@ -34,7 +34,6 @@ const Desc = styled.Text`
   color: #eee;
   font-size: 16px;
   font-weight: bold;
-  padding-bottom: 10px;
   text-align: center;
   width: 80%;
 `;
