@@ -23,6 +23,7 @@ class SearchBar extends Component {
 
   search(searchStr) {
     this.props.searchArtists(searchStr);
+    this.state.searchStr = "";
   }
 
   checkText(searchStr) {

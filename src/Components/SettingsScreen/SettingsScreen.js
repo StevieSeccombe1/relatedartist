@@ -60,7 +60,7 @@ class SettingsScreen extends Component {
     return (
       <Wrapper>
         <ContentWrapper>
-          <ScreenTitle noBackgroundText="true" title="Settings" />
+          <ScreenTitle noBackgroundText="true" title="About" />
           <SectionsWrapper>
             <Section
               top

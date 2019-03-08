@@ -45,6 +45,11 @@ const ResultCount = styled.Text`
   padding-bottom: 10px;
 `;
 
+const Bold = styled.Text`
+  color: green;
+  font-size: 20px;
+`;
+
 @inject("search", "artists")
 @observer
 export default class SearchScreen extends Component {
@@ -102,10 +107,6 @@ export default class SearchScreen extends Component {
     } = this.props.search;
     const name = this.props.navigation.getParam("name");
     const { decade, genre } = this.state;
-    let desc = "Search for a start artist or choose a genre and year below";
-    if (this.props.navigation.getParam("name") === "end") {
-      desc = "Now search for an end artist or choose a genre and year below";
-    }
     return (
       <Wrapper>
         <HeaderBack
@@ -113,7 +114,10 @@ export default class SearchScreen extends Component {
           navigateBack={() => this.props.navigation.goBack()}
         />
         <ContentWrapper>
-          <Desc>{desc}</Desc>
+          <Desc>
+            Search for a <Bold>{this.props.navigation.getParam("name")}</Bold>{" "}
+            artist or choose a genre and year below for a random artist
+          </Desc>
           <Searchbar name={name} searchArtists={str => searchArtists(str)} />
           <ResultCount>{totalResults || 0} results</ResultCount>
           {state === "loading" && <Loader />}

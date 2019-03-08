@@ -2,7 +2,7 @@ export const TABS = {
   Home: "My Games",
   GameScreen: "Current Game",
   Search: "Search",
-  Settings: "Settings"
+  Settings: "About"
 };
 
 export const TABBAR_ICONS = {
