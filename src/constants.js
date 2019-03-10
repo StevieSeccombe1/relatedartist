@@ -9,5 +9,5 @@ export const TABBAR_ICONS = {
   [TABS.Home]: "play",
   [TABS.GameScreen]: "calendar",
   [TABS.Search]: "search",
-  [TABS.Settings]: "cog"
+  [TABS.Settings]: "info-circle"
 };

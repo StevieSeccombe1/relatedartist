@@ -72,7 +72,8 @@ export default class extends Component {
     this.counter = 0;
     game.current = this.props.artists.startArtist;
     game.links = 0;
-    this.props.artists.storeGame(game);
+    this.props.artists.removeGame(game);
+    this.props.artists.startNewGame();
   }
 
   render() {

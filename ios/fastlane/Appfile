@@ -1,0 +1,6 @@
+app_identifier("org.stevieseccombe.relatedartist") # The bundle identifier of your app
+apple_id("slseccombe@googlemail.com") # Your Apple email address
+team_id "FN8BT67J73"
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

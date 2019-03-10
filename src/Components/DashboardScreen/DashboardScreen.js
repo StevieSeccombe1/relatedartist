@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { SafeAreaView } from "react-navigation";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 import { inject, observer } from "mobx-react";
 import ScreenBackground from "../../Common/ScreenBackground";
 import ScreenTitle from "../../Common/ScreenTitle";
@@ -19,6 +19,26 @@ const Wrapper = styled(ScreenBackground)`
 const ContentWrapper = styled(SafeAreaView)`
   flex: 1;
   justify-content: center;
+`;
+
+const IntroWrapper = styled(ScrollView)`
+  margin: 25px;
+  padding: 20px;
+`;
+
+const Title = styled.Text`
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  margin: 20px 0 10px 0;
+`;
+
+const Subtitle = styled.Text`
+  color: white;
+  font-size: 15px;
+  margin: 10px 0 20px 0;
+  text-align: center;
 `;
 
 @inject("artists")
@@ -70,6 +90,16 @@ class DashboardScreen extends Component {
             <Loader />
           ) : state === "error" ? (
             <ErrorCard />
+          ) : games.length === 0 ? (
+            <IntroWrapper>
+              <Title>Welcome to the Related Artist Game</Title>
+              <Subtitle>
+                Pick an artist and explore your way through the related artist
+                links across multiple genres and decades to reach your end
+                artist, discovering new music along the way
+              </Subtitle>
+              <Subtitle>To begin hit the New Game button below</Subtitle>
+            </IntroWrapper>
           ) : (
             <ScrollView>{games}</ScrollView>
           )}
