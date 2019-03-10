@@ -84,7 +84,6 @@ class DashboardScreen extends Component {
 
     return (
       <Wrapper>
-        <ScreenTitle noBackgroundText="true" title="My Games" />
         <ContentWrapper>
           {state === "loading" ? (
             <Loader />
@@ -101,7 +100,10 @@ class DashboardScreen extends Component {
               <Subtitle>To begin hit the New Game button below</Subtitle>
             </IntroWrapper>
           ) : (
-            <ScrollView>{games}</ScrollView>
+            <>
+              <ScreenTitle noBackgroundText="true" title="My Games" />
+              <ScrollView>{games}</ScrollView>
+            </>
           )}
         </ContentWrapper>
         <Button
