@@ -64,22 +64,6 @@ class SettingsScreen extends Component {
           <SectionsWrapper>
             <Section
               top
-              onPress={() => Linking.openURL("https://paypal.me/maximenory")}
-            >
-              <SectionTitle>Buy this guy a coffee</SectionTitle>
-              <Icon name="coffee" size={22} color="#fff" />
-            </Section>
-            <Section
-              bottom
-              onPress={() =>
-                Linking.openURL("https://paypal.me/StevieSeccombe")
-              }
-            >
-              <SectionTitle>Buy me a beer</SectionTitle>
-              <Icon name="beer" size={22} color="#fff" />
-            </Section>
-            <Section
-              top
               onPress={() =>
                 Linking.openURL(
                   "https://github.com/StevieSeccombe1/relatedartist"
